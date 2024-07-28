@@ -1,11 +1,5 @@
 import { create } from 'zustand';
 
-interface OpenProps {
-    html: string;
-    css: string;
-    tailwindCss?: string;
-}
-
 interface ModalStoreProps {
     isOpen: boolean;
     onOpen: () => void;

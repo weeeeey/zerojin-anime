@@ -4,29 +4,37 @@ import {
     DialogContent,
     DialogDescription,
     DialogHeader,
-    DialogTitle,
-    DialogTrigger,
 } from '@/components/ui/dialog';
+import { useCodeStore } from '@/lib/code-store';
 import { useModalStore } from '@/lib/modal-store';
 
-interface CodeModalProps {
-    html: string;
-    css: string;
-    tailwindCss?: string;
-}
-// { css, html, tailwindCss }: CodeModalProps
 const CodeModal = () => {
     const { onClose, isOpen } = useModalStore();
-
-    if (!isOpen) return null;
+    const { html, css, tailwind } = useCodeStore();
+    if (!isOpen || !html || !css) return null;
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
                     <DialogDescription>
-                        <code>` .loader {}`</code>
+                        <div className="flex flex-col justify-between items-start">
+                            <div className="bg-green-300">
+                                <code>
+                                    <pre>{html}</pre>
+                                </code>
+                            </div>
+                            <div className="bg-red-300">
+                                <code>
+                                    <pre>{css}</pre>
+                                </code>
+                            </div>
+                            <div>
+                                <code>
+                                    <pre>{tailwind}</pre>
+                                </code>
+                            </div>
+                        </div>
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
