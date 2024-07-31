@@ -1,4 +1,4 @@
-import { AnimationFCProps } from '.';
+import { AnimationFCProps } from '..';
 
 const css = `
 .loader {
@@ -25,7 +25,7 @@ const html = `
   <span class="loader"></span>
 `;
 
-const Circle02 = ({ handleClick }: AnimationFCProps) => {
+const Circle06 = ({ handleClick }: AnimationFCProps) => {
     return (
         <div
             className="cursor-pointer  h-[50vh] flex justify-center items-center"
@@ -35,5 +35,4 @@ const Circle02 = ({ handleClick }: AnimationFCProps) => {
         </div>
     );
 };
-
-export default Circle02;
+export default Circle06;

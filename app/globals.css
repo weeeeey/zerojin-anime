@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.aa {
-    color: black;
+html,
+body,
+:root {
+    height: 100%;
+    background-color: #263038;
 }
-
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -63,15 +65,54 @@
     }
 }
 
-@layer base {
-    * {
-        @apply border-border;
+/* @layer components {
+    .navbar-wrapper {
+        @apply absolute inset-0 bg-green-300;
     }
-    body {
-        @apply bg-background text-foreground;
+    .navbar {
+        @apply fixed top-0 left-0  bg-blue-300 w-full px-10 h-full z-50;
+        animation: navbar-scroll forwards linear;
+        animation-timeline: view();
+    }
+} */
+
+@layer components {
+    .navbar {
+        @apply fixed top-0 left-0 w-full px-10 z-50 bg-green-500;
+        animation: navbar-scroll linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0 calc(100vh - 4rem);
+    }
+    .navbar-title {
+        @apply font-bold text-[10vw];
+        animation: navbar-scroll-title linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0 calc(100vh - 4rem);
     }
 }
 
+@keyframes navbar-scroll {
+    from {
+        height: 100vh;
+    }
+    to {
+        height: 4rem;
+    }
+}
+@keyframes navbar-scroll-title {
+    to {
+        font-size: 3vw;
+    }
+}
+
+.grid-container {
+    > :nth-child(odd) {
+        background-color: rgb(0, 0, 0);
+    }
+    > :hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
 .loader {
     width: 48px;
     height: 48px;
@@ -109,15 +150,4 @@
     100% {
         transform: rotate(360deg);
     }
-}
-
-.grid-container {
-    background-color: #263038;
-}
-.grid-container > div:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.grid-container > div:hover {
-    background-color: rgba(0, 50, 11, 1);
 }
