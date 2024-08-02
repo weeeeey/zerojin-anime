@@ -1,7 +1,7 @@
 import { AnimationFCProps } from '..';
 
 const css = `
-.loader {
+.loader-3 {
     width: 48px;
     height: 48px;
     border: 5px solid #FFF;
@@ -9,15 +9,14 @@ const css = `
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+    animation: rotation-3 1s linear infinite;
     }
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
+    @keyframes rotation-3 {
+    
     100% {
         transform: rotate(360deg);
+        border-bottom-color: #FFF;
     }
 } 
 `;
@@ -31,7 +30,7 @@ const Circle03 = ({ handleClick }: AnimationFCProps) => {
             className="cursor-pointer  h-[50vh] flex justify-center items-center"
             onClick={() => handleClick(html, css)}
         >
-            <div className="loader-02" />
+            <div className="loader-3" />
         </div>
     );
 };

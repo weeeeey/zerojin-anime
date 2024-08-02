@@ -5,7 +5,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="h-full ">
             <Navbar />
-            <main className="mt-[100vh]">{children}</main>
+            {children}
         </div>
     );
 };
