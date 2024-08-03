@@ -27,7 +27,7 @@ const html = `
 const Circle03 = ({ handleClick }: AnimationFCProps) => {
     return (
         <div
-            className="cursor-pointer  h-[50vh] flex justify-center items-center"
+            className="cursor-pointer  h-[50vh] flex justify-center items-center "
             onClick={() => handleClick(html, css)}
         >
             <div className="loader-3" />

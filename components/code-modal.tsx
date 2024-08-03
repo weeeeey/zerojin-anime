@@ -21,11 +21,12 @@ const CodeModal = () => {
                     <DialogTitle>asd</DialogTitle>
                     <DialogDescription>aaa</DialogDescription>
                 </DialogHeader>
-                <div className="flex flex-col justify-between items-start">
-                    <div className="bg-green-300">
+
+                <div className="flex flex-col justify-between items-start space-y-2">
+                    <div className="bg-green-300 max-h-32 overflow-auto border border-blue-500 w-full ">
                         <pre>{html}</pre>
                     </div>
-                    <div className="bg-red-300">
+                    <div className="bg-red-300 max-h-32 overflow-auto border border-blue-500 w-full ">
                         <pre>{css}</pre>
                     </div>
                     <div>

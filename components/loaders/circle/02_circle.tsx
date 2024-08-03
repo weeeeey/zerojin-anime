@@ -21,9 +21,7 @@ const css = `
     }
 } 
 `;
-const html = `
-  <span class="loader"></span>
-`;
+const html = `<span class="loader" />`;
 
 const Circle02 = ({ handleClick }: AnimationFCProps) => {
     return (
