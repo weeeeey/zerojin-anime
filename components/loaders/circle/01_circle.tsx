@@ -1,4 +1,4 @@
-import { AnimationFCProps } from '.';
+import { AnimationFCProps } from '..';
 
 const html = `
   <span class="loader"></span>
