@@ -16,18 +16,24 @@ const CodeModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="px-2">
+      <DialogContent className="max-w-2xl px-2">
         <DialogHeader>
           <DialogTitle>asd</DialogTitle>
           <DialogDescription>aaa</DialogDescription>
         </DialogHeader>
 
         <div className="flex flex-col items-start justify-between space-y-2 overflow-auto">
-          <div className="max-h-32 w-full overflow-auto border border-blue-500 bg-green-300">
-            <pre>{html}</pre>
+          <div className="max-h-32 w-full divide-y-2 overflow-auto border">
+            <h2 className="sticky top-0 bg-black/90 px-2 py-1 text-white">
+              HTML
+            </h2>
+            <pre className="px-2 py-1">{html}</pre>
           </div>
-          <div className="max-h-72 w-full overflow-auto border border-blue-500 bg-red-300">
-            <pre>{css}</pre>
+          <div className="max-h-72 w-full divide-y-2 overflow-auto border border-blue-500">
+            <h2 className="sticky top-0 bg-black/90 px-2 py-1 text-white">
+              CSS
+            </h2>
+            <pre className="px-2 py-1">{css}</pre>
           </div>
           <div>
             <pre>{tailwind}</pre>

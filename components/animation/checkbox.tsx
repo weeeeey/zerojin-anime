@@ -18,8 +18,12 @@ const CheckBoxAnimation = ({
         onClick={(e) => e.stopPropagation()}
         className="flex w-fit items-center justify-center p-2"
       >
-        <input data-id={animationId} type="checkbox" id="check" />
-        <label htmlFor="check"></label>
+        <input
+          data-id={animationId}
+          type="checkbox"
+          id={`${animationId}-checkbox`}
+        />
+        <label htmlFor={`${animationId}-checkbox`}></label>
       </div>
     </div>
   );
