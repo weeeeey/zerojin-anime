@@ -41,9 +41,10 @@ input[type='checkbox'] {
   }
 }`,
   },
+
   {
-    dataId: "16C4C0CE",
-    css: `input[type="checkbox"] {
+    dataId: "626F9181",
+    css: `input[data-id="626F9181"] {
   display: none;
   + label {
     width: 100px;
@@ -65,7 +66,20 @@ input[type='checkbox'] {
       background-color: white;
       transition: 0.3s;
       transform: translateY(-50%);
-      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      clip-path: polygon(
+        0 20%,
+        15% 0,
+        52% 37%,
+        84% 0,
+        100% 18%,
+        65% 49%,
+        100% 85%,
+        85% 100%,
+        52% 61%,
+        15% 100%,
+        0 83%,
+        37% 50%
+      );
       /* rotate: 0; */
       transform-origin: top;
     }
