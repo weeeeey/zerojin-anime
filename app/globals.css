@@ -207,6 +207,112 @@ body,
   }
 }
 
+.loader[data-id="89435A44"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  position: relative;
+  border: 5px solid #fff;
+  animation: rotation 1s linear infinite;
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset: 4px;
+    border-radius: 50%;
+    border: 2px solid red;
+    border-bottom: transparent;
+    border-top: transparent;
+  }
+}
+
+.loader[data-id="66D60CF2"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  position: relative;
+  border: 5px solid #fff;
+  animation: rotation 1s linear infinite;
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    width: 4px;
+    height: 4px;
+    top: 4px;
+    left: calc(50% - 2px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    width: 4px;
+    height: 4px;
+    bottom: 4px;
+    left: calc(50% - 2px);
+  }
+}
+
+.loader[data-id="C1985B39"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  position: relative;
+  border: 5px #fff;
+  border-style: solid solid dotted dotted;
+  animation: rotation 2s linear infinite;
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 4px;
+    border: #ff3d00 3px;
+    border-style: solid solid dotted;
+    animation: rotation 1s reverse linear infinite;
+  }
+}
+
+.loader[data-id="5622703E"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  position: relative;
+  border: 5px #fff solid;
+  animation: outCircle 1s linear infinite;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    transform: scale(0);
+    border: 2px #fff solid;
+    animation: inCircle 1s linear infinite;
+  }
+}
+@keyframes inCircle {
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes outCircle {
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 input[data-id="39CD2F6F"] {
   display: none;
   + label {
@@ -265,16 +371,16 @@ input[data-id="626F9181"] {
       clip-path: polygon(
         0 20%,
         15% 0,
-        52% 37%,
-        84% 0,
-        100% 18%,
-        65% 49%,
+        50% 40%,
+        85% 0,
+        100% 15%,
+        65% 50%,
         100% 85%,
         85% 100%,
-        52% 61%,
+        50% 60%,
         15% 100%,
-        0 83%,
-        37% 50%
+        0 85%,
+        35% 50%
       );
       /* rotate: 0; */
       transform-origin: top;
